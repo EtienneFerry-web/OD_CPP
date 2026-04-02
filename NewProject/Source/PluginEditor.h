@@ -30,4 +30,8 @@ private:
     NewProjectAudioProcessor& audioProcessor;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NewProjectAudioProcessorEditor)
+    juce::Slider driveSlider;
+    juce::Slider volumeSlider;
+    juce::Label driveLabel;
+    juce::Label volumeLabel;
 };

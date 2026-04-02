@@ -13,9 +13,39 @@
 NewProjectAudioProcessorEditor::NewProjectAudioProcessorEditor (NewProjectAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
-    // Make sure that before the constructor has finished, you've set the
-    // editor's size to whatever you need it to be.
-    setSize (400, 300);
+// --- Configuration du Slider de DRIVE ---
+    driveSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
+    driveSlider.setRange(1.0, 50.0, 0.1);
+    driveSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
+    addAndMakeVisible(driveSlider);
+    
+    driveLabel.setText("Gain / Drive", juce::dontSendNotification);
+    driveLabel.attachToComponent(&driveSlider, false);
+    driveLabel.setJustificationType(juce::Justification::centred);
+    addAndMakeVisible(driveLabel);
+
+    // --- Configuration du Slider de VOLUME ---
+    volumeSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
+    volumeSlider.setRange(0.0, 1.0, 0.01); // Le volume va souvent de 0 à 1 (ou 0 à 1.5)
+    volumeSlider.setValue(0.5); // Valeur par défaut à 50%
+    volumeSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
+    addAndMakeVisible(volumeSlider);
+
+    volumeLabel.setText("Output Vol", juce::dontSendNotification);
+    volumeLabel.attachToComponent(&volumeSlider, false);
+    volumeLabel.setJustificationType(juce::Justification::centred);
+    addAndMakeVisible(volumeLabel);
+
+    // Liaison avec le processeur (méthode simple par Lambda)
+    volumeSlider.onValueChange = [this] { 
+        audioProcessor.setVolume(volumeSlider.getValue()); 
+    };
+    
+    driveSlider.onValueChange = [this] {
+        audioProcessor.setDrive(driveSlider.getValue());
+    };
+
+    setSize (500, 300);
 }
 
 NewProjectAudioProcessorEditor::~NewProjectAudioProcessorEditor()
@@ -35,6 +65,19 @@ void NewProjectAudioProcessorEditor::paint (juce::Graphics& g)
 
 void NewProjectAudioProcessorEditor::resized()
 {
-    // This is generally where you'll want to lay out the positions of any
-    // subcomponents in your editor..
+    
+// On définit une zone pour nos boutons
+    auto area = getLocalBounds().reduced(20);
+    auto sliderWidth = 120;
+    auto sliderHeight = 150;
+
+    // Placement du Drive à gauche
+    driveSlider.setBounds(area.removeFromLeft(sliderWidth).withSizeKeepingCentre(sliderWidth, sliderHeight));
+    
+    // Un peu d'espace entre les deux
+    area.removeFromLeft(40); 
+    
+    // Placement du Volume à côté
+    volumeSlider.setBounds(area.removeFromLeft(sliderWidth).withSizeKeepingCentre(sliderWidth, sliderHeight));
+
 }

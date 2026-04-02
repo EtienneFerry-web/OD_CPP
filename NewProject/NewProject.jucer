@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="aSiiWc" name="NewProject" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
-  <MAINGROUP id="wTDqyM" name="NewProject">
+<JUCERPROJECT id="aSiiWc" name="OD_CPP" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginName="OD_CPP"
+              pluginDesc="Overdrive Test ">
+  <MAINGROUP id="wTDqyM" name="OD_CPP">
     <GROUP id="{AE81B8F2-C2AF-6252-1DCB-2AB90BB9B49B}" name="Source">
       <FILE id="XQUB7K" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>

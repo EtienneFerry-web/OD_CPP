@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		CE52BA9AB15A0BFEF4427980 /* NewProject - All */ = {
+		CE52BA9AB15A0BFEF4427980 /* OD_CPP - All */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = E8117C4D9BF205F5C667EB0A;
 			buildPhases = (
@@ -19,8 +19,8 @@
 				A9358498A097A0699DED777B,
 				3AF085689B160CD2133D9B60,
 			);
-			name = "NewProject - All";
-			productName = NewProject;
+			name = "OD_CPP - All";
+			productName = OD_CPP;
 		};
 /* End PBXAggregateTarget section */
 
@@ -126,12 +126,12 @@
 			name = "JUCE Library Code";
 			sourceTree = "<group>";
 		};
-		A1D00C4DE180DB850B47F29A /* NewProject */ = {
+		A1D00C4DE180DB850B47F29A /* OD_CPP */ = {
 			isa = PBXGroup;
 			children = (
 				FE81C0FA6E7AA0DB7CFE2B89,
 			);
-			name = NewProject;
+			name = OD_CPP;
 			sourceTree = "<group>";
 		};
 		A27EC3127C10A5472D59E55B /* Source */ = {
@@ -172,7 +172,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27FEB55714E4E900F7C6C58B /* NewProject - Standalone Plugin */ = {
+		27FEB55714E4E900F7C6C58B /* OD_CPP - Standalone Plugin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1550569893BF7D616C1DC8CA;
 			buildPhases = (
@@ -185,12 +185,12 @@
 			dependencies = (
 				AC2B1E9C55AD7B8C6BF5C038,
 			);
-			name = "NewProject - Standalone Plugin";
-			productName = NewProject;
+			name = "OD_CPP - Standalone Plugin";
+			productName = OD_CPP;
 			productReference = E396F20C443FB57BF9937DEB;
 			productType = "com.apple.product-type.application";
 		};
-		6F9D00728724BC9E4369D64E /* NewProject - AU */ = {
+		6F9D00728724BC9E4369D64E /* OD_CPP - AU */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E77A2438038F05DD2A46B10;
 			buildPhases = (
@@ -204,12 +204,12 @@
 			dependencies = (
 				8C0D2C56F82DD34C11FDBF20,
 			);
-			name = "NewProject - AU";
-			productName = NewProject;
+			name = "OD_CPP - AU";
+			productName = OD_CPP;
 			productReference = 5A1966A72C9F287D2CF456C6;
 			productType = "com.apple.product-type.bundle";
 		};
-		75D9CDB4A98C43BB2BD910DF /* NewProject - Shared Code */ = {
+		75D9CDB4A98C43BB2BD910DF /* OD_CPP - Shared Code */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF657A22E449509506E83346;
 			buildPhases = (
@@ -219,12 +219,12 @@
 			);
 			dependencies = (
 			);
-			name = "NewProject - Shared Code";
-			productName = NewProject;
+			name = "OD_CPP - Shared Code";
+			productName = OD_CPP;
 			productReference = 3F838DF6A431E29C9293FA23;
 			productType = "com.apple.product-type.library.static";
 		};
-		B9E979F541AA46A30F09481C /* NewProject - VST3 */ = {
+		B9E979F541AA46A30F09481C /* OD_CPP - VST3 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29A6D9832D03B23E50B622E3;
 			buildPhases = (
@@ -240,12 +240,12 @@
 				9DBF3B3961006BE0420DBC4C,
 				3AA02376BF0C0BD39AAFC667,
 			);
-			name = "NewProject - VST3";
-			productName = NewProject;
+			name = "OD_CPP - VST3";
+			productName = OD_CPP;
 			productReference = 67510BBC23BCF68C472FED3F;
 			productType = "com.apple.product-type.bundle";
 		};
-		D7D56DEA5C0E19B42AF54DEB /* NewProject - VST3 Manifest Helper */ = {
+		D7D56DEA5C0E19B42AF54DEB /* OD_CPP - VST3 Manifest Helper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0074CF47A3B4C0E299C620D4;
 			buildPhases = (
@@ -256,8 +256,8 @@
 			);
 			dependencies = (
 			);
-			name = "NewProject - VST3 Manifest Helper";
-			productName = NewProject;
+			name = "OD_CPP - VST3 Manifest Helper";
+			productName = OD_CPP;
 			productReference = C187B147194C9639331C7779;
 			productType = "com.apple.product-type.tool";
 		};
@@ -616,11 +616,11 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType=\\'aufx\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=NewProjectAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"NewProjectAU\\\"",
+					"JucePlugin_AUExportPrefix=OD_CPPAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"OD_CPPAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.NewProject",
-					"JucePlugin_AAXIdentifier=com.yourcompany.NewProject",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.OD_CPP",
+					"JucePlugin_AAXIdentifier=com.yourcompany.OD_CPP",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -633,8 +633,8 @@
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.NewProject.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.NewProject.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.OD_CPP.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.OD_CPP.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -655,7 +655,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode";
 				OTHER_LDFLAGS = "-bundle -lNewProject";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.NewProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.OD_CPP;
 				PRODUCT_NAME = "NewProject";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -710,11 +710,11 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType=\\'aufx\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=NewProjectAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"NewProjectAU\\\"",
+					"JucePlugin_AUExportPrefix=OD_CPPAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"OD_CPPAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.NewProject",
-					"JucePlugin_AAXIdentifier=com.yourcompany.NewProject",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.OD_CPP",
+					"JucePlugin_AAXIdentifier=com.yourcompany.OD_CPP",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -727,8 +727,8 @@
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.NewProject.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.NewProject.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.OD_CPP.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.OD_CPP.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -746,7 +746,7 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.NewProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.OD_CPP;
 				PRODUCT_NAME = "juce_vst3_helper";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -800,11 +800,11 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType=\\'aufx\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=NewProjectAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"NewProjectAU\\\"",
+					"JucePlugin_AUExportPrefix=OD_CPPAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"OD_CPPAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.NewProject",
-					"JucePlugin_AAXIdentifier=com.yourcompany.NewProject",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.OD_CPP",
+					"JucePlugin_AAXIdentifier=com.yourcompany.OD_CPP",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -817,8 +817,8 @@
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.NewProject.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.NewProject.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.OD_CPP.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.OD_CPP.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -837,7 +837,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode";
 				OTHER_LDFLAGS = "-lNewProject";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.NewProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.OD_CPP;
 				PRODUCT_NAME = "NewProject";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -891,11 +891,11 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType=\\'aufx\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=NewProjectAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"NewProjectAU\\\"",
+					"JucePlugin_AUExportPrefix=OD_CPPAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"OD_CPPAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.NewProject",
-					"JucePlugin_AAXIdentifier=com.yourcompany.NewProject",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.OD_CPP",
+					"JucePlugin_AAXIdentifier=com.yourcompany.OD_CPP",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -908,8 +908,8 @@
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.NewProject.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.NewProject.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.OD_CPP.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.OD_CPP.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -926,7 +926,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.NewProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.OD_CPP;
 				PRODUCT_NAME = "NewProject";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
@@ -981,11 +981,11 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType=\\'aufx\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=NewProjectAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"NewProjectAU\\\"",
+					"JucePlugin_AUExportPrefix=OD_CPPAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"OD_CPPAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.NewProject",
-					"JucePlugin_AAXIdentifier=com.yourcompany.NewProject",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.OD_CPP",
+					"JucePlugin_AAXIdentifier=com.yourcompany.OD_CPP",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -998,8 +998,8 @@
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.NewProject.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.NewProject.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.OD_CPP.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.OD_CPP.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1022,7 +1022,7 @@
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode";
 				OTHER_LDFLAGS = "-bundle -lNewProject";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.NewProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.OD_CPP;
 				PRODUCT_NAME = "NewProject";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1077,11 +1077,11 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType=\\'aufx\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=NewProjectAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"NewProjectAU\\\"",
+					"JucePlugin_AUExportPrefix=OD_CPPAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"OD_CPPAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.NewProject",
-					"JucePlugin_AAXIdentifier=com.yourcompany.NewProject",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.OD_CPP",
+					"JucePlugin_AAXIdentifier=com.yourcompany.OD_CPP",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1094,8 +1094,8 @@
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.NewProject.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.NewProject.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.OD_CPP.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.OD_CPP.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1117,7 +1117,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode";
 				OTHER_LDFLAGS = "-bundle -lNewProject";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.NewProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.OD_CPP;
 				PRODUCT_NAME = "NewProject";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1180,11 +1180,11 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType=\\'aufx\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=NewProjectAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"NewProjectAU\\\"",
+					"JucePlugin_AUExportPrefix=OD_CPPAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"OD_CPPAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.NewProject",
-					"JucePlugin_AAXIdentifier=com.yourcompany.NewProject",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.OD_CPP",
+					"JucePlugin_AAXIdentifier=com.yourcompany.OD_CPP",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1197,8 +1197,8 @@
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.NewProject.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.NewProject.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.OD_CPP.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.OD_CPP.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1216,7 +1216,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode";
 				OTHER_LDFLAGS = "-lNewProject";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.NewProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.OD_CPP;
 				PRODUCT_NAME = "NewProject";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1270,11 +1270,11 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType=\\'aufx\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=NewProjectAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"NewProjectAU\\\"",
+					"JucePlugin_AUExportPrefix=OD_CPPAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"OD_CPPAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.NewProject",
-					"JucePlugin_AAXIdentifier=com.yourcompany.NewProject",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.OD_CPP",
+					"JucePlugin_AAXIdentifier=com.yourcompany.OD_CPP",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1287,8 +1287,8 @@
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.NewProject.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.NewProject.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.OD_CPP.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.OD_CPP.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1310,7 +1310,7 @@
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode";
 				OTHER_LDFLAGS = "-bundle -lNewProject";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.NewProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.OD_CPP;
 				PRODUCT_NAME = "NewProject";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1373,11 +1373,11 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType=\\'aufx\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=NewProjectAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"NewProjectAU\\\"",
+					"JucePlugin_AUExportPrefix=OD_CPPAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"OD_CPPAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.NewProject",
-					"JucePlugin_AAXIdentifier=com.yourcompany.NewProject",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.OD_CPP",
+					"JucePlugin_AAXIdentifier=com.yourcompany.OD_CPP",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1390,8 +1390,8 @@
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.NewProject.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.NewProject.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.OD_CPP.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.OD_CPP.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1409,7 +1409,7 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.NewProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.OD_CPP;
 				PRODUCT_NAME = "NewProject";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
@@ -1561,11 +1561,11 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType=\\'aufx\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=NewProjectAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"NewProjectAU\\\"",
+					"JucePlugin_AUExportPrefix=OD_CPPAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"OD_CPPAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.NewProject",
-					"JucePlugin_AAXIdentifier=com.yourcompany.NewProject",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.OD_CPP",
+					"JucePlugin_AAXIdentifier=com.yourcompany.OD_CPP",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1578,8 +1578,8 @@
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
 					"JucePlugin_ARATransformationFlags=0",
-					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.NewProject.factory\\\"",
-					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.NewProject.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.OD_CPP.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.OD_CPP.aradocumentarchive.1.0.0\\\"",
 					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
@@ -1596,7 +1596,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.NewProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.OD_CPP;
 				PRODUCT_NAME = "juce_vst3_helper";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
