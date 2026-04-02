@@ -1,83 +1,71 @@
-/*
-  ==============================================================================
-
-    This file contains the basic framework code for a JUCE plugin editor.
-
-  ==============================================================================
-*/
-
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-//==============================================================================
 NewProjectAudioProcessorEditor::NewProjectAudioProcessorEditor (NewProjectAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
-// --- Configuration du Slider de DRIVE ---
+    // --- DRIVE ---
     driveSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     driveSlider.setRange(1.0, 50.0, 0.1);
     driveSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
     addAndMakeVisible(driveSlider);
     
-    driveLabel.setText("Gain / Drive", juce::dontSendNotification);
+    driveLabel.setText("Drive", juce::dontSendNotification);
     driveLabel.attachToComponent(&driveSlider, false);
     driveLabel.setJustificationType(juce::Justification::centred);
-    addAndMakeVisible(driveLabel);
 
-    // --- Configuration du Slider de VOLUME ---
+    // --- TONE ---
+    toneSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
+    toneSlider.setRange(400.0, 15000.0, 1.0); 
+    toneSlider.setSkewFactorFromMidPoint(2000.0); 
+    toneSlider.setValue(2000.0);
+    toneSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
+    addAndMakeVisible(toneSlider);
+
+    toneLabel.setText("Tone", juce::dontSendNotification);
+    toneLabel.attachToComponent(&toneSlider, false);
+    toneLabel.setJustificationType(juce::Justification::centred);
+
+    // --- VOLUME ---
     volumeSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    volumeSlider.setRange(0.0, 1.0, 0.01); // Le volume va souvent de 0 à 1 (ou 0 à 1.5)
-    volumeSlider.setValue(0.5); // Valeur par défaut à 50%
+    volumeSlider.setRange(0.0, 1.0, 0.01); 
+    volumeSlider.setValue(0.5); 
     volumeSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
     addAndMakeVisible(volumeSlider);
 
-    volumeLabel.setText("Output Vol", juce::dontSendNotification);
+    volumeLabel.setText("Volume", juce::dontSendNotification);
     volumeLabel.attachToComponent(&volumeSlider, false);
     volumeLabel.setJustificationType(juce::Justification::centred);
-    addAndMakeVisible(volumeLabel);
 
-    // Liaison avec le processeur (méthode simple par Lambda)
-    volumeSlider.onValueChange = [this] { 
-        audioProcessor.setVolume(volumeSlider.getValue()); 
-    };
-    
-    driveSlider.onValueChange = [this] {
-        audioProcessor.setDrive(driveSlider.getValue());
-    };
+    // --- LIAISONS ---
+    volumeSlider.onValueChange = [this] { audioProcessor.setVolume(volumeSlider.getValue()); };
+    toneSlider.onValueChange = [this] { audioProcessor.setTone(toneSlider.getValue()); };
+    driveSlider.onValueChange = [this] { audioProcessor.setDrive(driveSlider.getValue()); };
 
     setSize (500, 300);
 }
 
-NewProjectAudioProcessorEditor::~NewProjectAudioProcessorEditor()
-{
-}
+NewProjectAudioProcessorEditor::~NewProjectAudioProcessorEditor() {}
 
-//==============================================================================
 void NewProjectAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+    // Fond vert type "Tube Screamer"
+    g.fillAll (juce::Colour::fromFloatRGBA (0.15f, 0.45f, 0.15f, 1.0f)); 
 
     g.setColour (juce::Colours::white);
-    g.setFont (juce::FontOptions (15.0f));
-    g.drawFittedText ("Hello World!", getLocalBounds(), juce::Justification::centred, 1);
+    g.setFont (24.0f);
+    g.drawFittedText ("MY OVERDRIVE", getLocalBounds().removeFromTop(50), juce::Justification::centred, 1);
 }
 
 void NewProjectAudioProcessorEditor::resized()
 {
-    
-// On définit une zone pour nos boutons
     auto area = getLocalBounds().reduced(20);
-    auto sliderWidth = 120;
-    auto sliderHeight = 150;
-
-    // Placement du Drive à gauche
-    driveSlider.setBounds(area.removeFromLeft(sliderWidth).withSizeKeepingCentre(sliderWidth, sliderHeight));
+    area.removeFromTop(40); // On laisse de la place pour le titre
     
-    // Un peu d'espace entre les deux
-    area.removeFromLeft(40); 
-    
-    // Placement du Volume à côté
-    volumeSlider.setBounds(area.removeFromLeft(sliderWidth).withSizeKeepingCentre(sliderWidth, sliderHeight));
+    int sliderWidth = area.getWidth() / 3;
 
+    // On distribue proprement l'espace
+    driveSlider.setBounds(area.removeFromLeft(sliderWidth).withSizeKeepingCentre(sliderWidth, 180));
+    toneSlider.setBounds(area.removeFromLeft(sliderWidth).withSizeKeepingCentre(sliderWidth, 180));
+    volumeSlider.setBounds(area.removeFromLeft(sliderWidth).withSizeKeepingCentre(sliderWidth, 180));
 }

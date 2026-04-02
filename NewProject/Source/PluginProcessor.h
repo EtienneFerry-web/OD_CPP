@@ -53,6 +53,7 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
+    void setTone(float newValue) { toneLevel = newValue; }
     void setDrive(float newValue) { driveLevel = newValue; }
     void setVolume(float newValue) { volumeLevel = newValue; }
 
@@ -62,5 +63,7 @@ private:
 
     float driveLevel = 1.0f; // Multiplicateur de gain
     float volumeLevel = 0.5f; // Volume de sortie
-    juce::dsp::ProcessorChain<juce::dsp::Oversampling<float>> oversamplingChain;
+    float toneLevel = 1000.0f; // Fréquence de coupure en hz
+
+    juce::dsp::ProcessorChain<juce::dsp::StateVariableFilter::Processor<float>> filterChain;
 };

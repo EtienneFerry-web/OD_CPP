@@ -93,8 +93,14 @@ void NewProjectAudioProcessor::changeProgramName (int index, const juce::String&
 //==============================================================================
 void NewProjectAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    juce::dsp::ProcessSpec spec;
+    spec.sampleRate = sampleRate;
+    spec.maximumBlockSize = samplesPerBlock;
+    spec.numChannels = getTotalNumInpotChannels();
+
+    filterChain.prepare(spec);
+    //On règle le filtre en mode "Low-pass" (Passe-bas)
+    filterChain.get<0>.setType(juce::dsp::StateVariableFilter::Parameters<float>::type::lowPass);
 }
 
 void NewProjectAudioProcessor::releaseResources()
@@ -135,6 +141,11 @@ void NewProjectAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
+    filterChain.get<0>().setCutoffFrequency(toneLevel);
+
+    juce::dsp::AudioBlock<float> block(buffer);
+    juce::dsp::ProcessContextReplacing<float> context(block);
+
     // On nettoie les canaux inutilisés
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
@@ -160,6 +171,8 @@ void NewProjectAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
             channelData[sample] = output * volumeLevel;
         }
     }
+    
+    filterChain.process(context);
 }
 
 
