@@ -135,28 +135,33 @@ void NewProjectAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-    // In case we have more outputs than inputs, this code clears any output
-    // channels that didn't contain input data, (because these aren't
-    // guaranteed to be empty - they may contain garbage).
-    // This is here to avoid people getting screaming feedback
-    // when they first compile a plugin, but obviously you don't need to keep
-    // this code if your algorithm always overwrites all the output channels.
+    // On nettoie les canaux inutilisés
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
+    // Boucle sur chaque échantillon (Sample)
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
         auto* channelData = buffer.getWritePointer (channel);
 
-        // ..do something to the data...
+        for (int sample = 0; sample < buffer.getNumSamples(); ++sample)
+        {
+            // 1. Entrée
+            float input = channelData[sample];
+
+            // 2. Drive (On multiplie le signal avant la saturation)
+            float x = input * driveLevel;
+
+            // 3. Distortion (Algo Soft-Clipping type Tube Screamer)
+            // On utilise std::atan ou std::tanh pour arrondir les crêtes
+            float output = (2.0f / juce::MathConstants<float>::pi) * std::atan(x);
+
+            // 4. Sortie avec réglage du Volume
+            channelData[sample] = output * volumeLevel;
+        }
     }
 }
+
 
 //==============================================================================
 bool NewProjectAudioProcessor::hasEditor() const
